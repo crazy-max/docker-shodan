@@ -18,10 +18,24 @@ If you are interested, [check out](https://hub.docker.com/r/crazymax/) my other 
 
 ___
 
+* [Build locally](#build-locally)
 * [Image](#image)
 * [Usage](#usage)
 * [How can I help?](#how-can-i-help)
 * [License](#license)
+
+## Build locally
+
+```shell
+git clone https://github.com/crazy-max/docker-shodan.git
+cd docker-shodan
+
+# Build image and output to docker (default)
+docker buildx bake
+
+# Build multi-platform image
+docker buildx bake image-all
+```
 
 ## Image
 
