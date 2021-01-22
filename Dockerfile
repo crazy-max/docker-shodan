@@ -13,6 +13,8 @@ RUN apk --update --no-cache add \
   && pip3 install shodan==${SHODAN_VERSION} --no-cache-dir \
   && addgroup shodan \
   && adduser -D -G shodan -s /bin/sh shodan \
+  && mkdir -p /home/shodan/.config/shodan \
+  && chown -R shodan. /home/shodan \
   && rm -rf /var/cache/apk/* /tmp/*
 
 WORKDIR /home/shodan
