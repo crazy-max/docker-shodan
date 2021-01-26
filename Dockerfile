@@ -1,7 +1,7 @@
 FROM alpine:3.13
 LABEL maintainer="CrazyMax"
 
-ENV SHODAN_VERSION="1.24.0"
+ENV SHODAN_VERSION="1.25.0"
 
 RUN apk --update --no-cache add \
     bash \
