@@ -1,6 +1,6 @@
 ARG SHODAN_VERSION=1.25.0
 
-FROM alpine:3.13
+FROM alpine:3.14
 
 ARG SHODAN_VERSION
 RUN apk --update --no-cache add \
