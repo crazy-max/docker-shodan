@@ -1,6 +1,6 @@
-ARG SHODAN_VERSION=1.25.0
+ARG SHODAN_VERSION=1.27.0
 
-FROM alpine:3.14
+FROM alpine:3.15
 
 ARG SHODAN_VERSION
 RUN apk --update --no-cache add \
@@ -15,7 +15,7 @@ RUN apk --update --no-cache add \
   && adduser -D -G shodan -s /bin/sh shodan \
   && mkdir -p /home/shodan/.config/shodan \
   && chown -R shodan. /home/shodan \
-  && rm -rf /var/cache/apk/* /tmp/*
+  && rm -rf /tmp/*
 
 WORKDIR /home/shodan
 USER shodan
